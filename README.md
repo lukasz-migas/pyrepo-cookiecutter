@@ -4,8 +4,8 @@ This is my personal python repository bootstrap.
 
 Feel free to use it as a launching point for your next project!
 
-https://github.com/tlambert03/pyrepo-cookiecutter/tree/simple
-| For simplified/minimal starter package see the [`simple` branch](https://github.com/tlambert03/pyrepo-cookiecutter/tree/simple) |
+https://github.com/lukasz-migas/pyrepo-cookiecutter/tree/simple
+| For simplified/minimal starter package see the [`simple` branch](https://github.com/lukasz-migas/pyrepo-cookiecutter/tree/simple) |
 | ------------- | 
 
 
@@ -18,14 +18,14 @@ cookiecutter (this will let you [update it](#update-it) easily later)
 
 ```sh
 pip install cruft
-cruft create https://github.com/tlambert03/pyrepo-cookiecutter
+cruft create https://github.com/lukasz-migas/pyrepo-cookiecutter
 ```
 
 or you can use cookiecutter as usual:
 
 ```sh
 pip install cookiecutter
-cookiecutter https://github.com/tlambert03/pyrepo-cookiecutter
+cookiecutter https://github.com/lukasz-migas/pyrepo-cookiecutter
 ```
 
 ### 2. Run `git init` and install `pre-commit`

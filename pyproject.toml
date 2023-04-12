@@ -10,7 +10,7 @@ description = "personal cookiecutter for python projects"
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "BSD 3-Clause License" }
-authors = [{ name = "Talley Lambert", email = "talley.lambert@gmail.com" }]
+authors = [{ name = "Lukasz G. Migas", email = "lukas.migas@yahoo.com" }]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: BSD License",

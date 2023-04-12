@@ -1,10 +1,10 @@
 {
-  "full_name": "Talley Lambert",
-  "email": "talley.lambert@gmail.com",
-  "github_username": "tlambert03",
+  "full_name": "Lukasz G. Migas",
+  "email": "lukas.migas@yahoo.com",
+  "github_username": "lukasz-migas",
   "project_name": "pyrepo",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "package description.",
-  "pypi_username": "talley",
+  "pypi_username": "lukasz-migas",
   "_copy_without_render": [".github/workflows/*"]
 }
