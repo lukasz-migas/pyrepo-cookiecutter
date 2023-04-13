@@ -68,9 +68,17 @@ source = "vcs"
 # only-include = ["src"]
 # sources = ["src"]
 
+
+# https://github.com/psf/black
+[tool.black]
+line-length = 120
+target-version = ['py37', 'py38', 'py39']
+include = '\.pyi?$'
+
+
 # https://github.com/charliermarsh/ruff
 [tool.ruff]
-line-length = 88
+line-length = 120
 target-version = "py38"
 # https://beta.ruff.rs/docs/rules/
 extend-select = [
