@@ -4,11 +4,6 @@ This is my personal python repository bootstrap.
 
 Feel free to use it as a launching point for your next project!
 
-https://github.com/lukasz-migas/pyrepo-cookiecutter/tree/simple
-| For simplified/minimal starter package see the [`simple` branch](https://github.com/lukasz-migas/pyrepo-cookiecutter/tree/simple) |
-| ------------- | 
-
-
 ## How to use it
 
 ### 1. Create a new repo
@@ -103,16 +98,16 @@ gh repo create --source=. --public --remote=origin --push
 
 ## Stuff included
 
-- [PEP 517](https://peps.python.org/pep-0517/) build system with [hatch
-  backend](https://hatch.pypa.io/)
+- [PEP 517](https://peps.python.org/pep-0517/) build system
   - build with `python -m build`, [*not* `python
     setup.py`](https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html)!
 - [PEP 621](https://peps.python.org/pep-0621/) metadata in `pyproject.toml`
   - *all* additional configurables are also in `pyproject.toml`, with
   links to documentation
 - uses `src` layout ([How come?](https://hynek.me/articles/testing-packaging/))
-- git tag-based versioning with [hatch-vcs](https://github.com/ofek/hatch-vcs)
-- autodeploy to PyPI on tagged commit (set `TWINE_API_KEY` env var on github). See [Deploying to PyPI](#deploying-to-pypi) below.
+- git tag-based versioning with [setuptools_vcm](https://github.com/pypa/setuptools_scm)
+- autodeploy to TestPyPI on tagged commit (set `TEST_PIPI_TOKEN` env var on github). See [Deploying to PyPI](#deploying-to-pypi) below.
+- autodeploy to PyPI on tagged commit (set `PYPI_TOKEN` env var on github). See [Deploying to PyPI](#deploying-to-pypi) below.
 - Testing with [pytest](https://docs.pytest.org/en/7.1.x/)
 - CI & testing with [github actions](https://docs.github.com/en/actions)
 - GitHub action
@@ -136,16 +131,15 @@ gh repo create --source=. --public --remote=origin --push
 When I'm ready to deploy a version, I tag the commit with a version number and
 push it to github.  This will trigger a github action that will build and deploy
 to PyPI. (see the "deploy" step in `workflows/ci.yml`). The version number is determined by the git tag using
-[hatch-vcs](https://github.com/ofek/hatch-vcs)... which wraps
 [setuptools-scm](https://github.com/pypa/setuptools_scm/)
 
-To auto-deploy to PyPI, you'll need to set a `TWINE_API_KEY` environment
+To auto-deploy to PyPI, you'll need to set a `TEST_PYPI_TOKEN` and `PYPI_TOKEN` environment
 variable in your github repo settings.  You can get this key from your [pypi
 account](https://pypi.org/manage/account/token/).  Then add it to your github
-repository settings as a secret named `TWINE_API_KEY`. (see [github
+repository settings as a secret named `PYPI_TOKEN`. (see [github
 docs](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository))
 
-(the name `TWINE_API_KEY` is specified in `workflows/ci.yml`)
+(the name `TEST_PYPI_TOKEN` and `PYPI_TOKEN` is specified in `workflows/ci.yml`)
 
 ```sh
 git tag -a v0.1.0 -m v0.1.0
