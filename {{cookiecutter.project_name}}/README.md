@@ -7,3 +7,13 @@
 [![codecov](https://codecov.io/gh/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{cookiecutter.github_username}}/{{cookiecutter.project_name}})
 
 {{cookiecutter.project_short_description}}
+
+## Contributing
+
+Contributions are always welcome. Please feel free to submit PRs with new features, bug fixes, or documentation improvements.
+
+```bash
+git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git
+
+pip install -e .[dev]
+```
