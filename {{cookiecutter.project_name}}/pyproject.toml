@@ -149,6 +149,8 @@ ignore = [
     ".ruff_cache/**/*",
     "setup.py",
     "tests/**/*",
+    ".idea/**/*",
+    "_version.py"
 ]
 
 # https://python-semantic-release.readthedocs.io/en/latest/configuration.html
