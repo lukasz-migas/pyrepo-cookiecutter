@@ -59,7 +59,7 @@ repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter
 # tomatoes = "spam:main_tomatoes"
 
 [tool.setuptools_scm]
-write_to = "src/{{cookiecutter.project_name}}/_version.py"
+write_to = "src/{{cookiecutter.project_slug}}/_version.py"
 
 # https://github.com/psf/black
 [tool.black]
@@ -72,6 +72,7 @@ include = '\.pyi?$'
 [tool.ruff]
 line-length = 120
 target-version = "py38"
+src = ["src"]
 # https://beta.ruff.rs/docs/rules/
 extend-select = [
     "E",    # style errors
@@ -79,9 +80,9 @@ extend-select = [
     "F",    # flakes
     "D",    # pydocstyle
     "I",    # isort
-    "U",    # pyupgrade
+    "UP",    # pyupgrade
     # "S",    # bandit
-    "C",    # flake8-comprehensions
+    "C4",    # flake8-comprehensions
     "B",    # flake8-bugbear
     "A001", # flake8-builtins
     "RUF",  # ruff-specific rules
@@ -139,7 +140,7 @@ exclude_lines = [
 ]
 
 [tool.coverage.run]
-source = ["src"]
+source = ["{{cookiecutter.project_slug}}"]
 
 # https://github.com/mgedmin/check-manifest#configuration
 [tool.check-manifest]
@@ -147,19 +148,10 @@ ignore = [
     ".github_changelog_generator",
     ".pre-commit-config.yaml",
     ".ruff_cache/**/*",
-    "setup.py",
     "tests/**/*",
     ".idea/**/*",
     "_version.py"
 ]
-
-# https://python-semantic-release.readthedocs.io/en/latest/configuration.html
-[tool.semantic_release]
-version_source = "tag_only"
-branch = "main"
-changelog_sections = "feature,fix,breaking,documentation,performance,chore,:boom:,:sparkles:,:children_crossing:,:lipstick:,:iphone:,:egg:,:chart_with_upwards_trend:,:ambulance:,:lock:,:bug:,:zap:,:goal_net:,:alien:,:wheelchair:,:speech_balloon:,:mag:,:apple:,:penguin:,:checkered_flag:,:robot:,:green_apple:,Other"
-# commit_parser=semantic_release.history.angular_parser
-build_command = "pip install build && python -m build"
 
 # # for things that require compilation
 # # https://cibuildwheel.readthedocs.io/en/stable/options/
