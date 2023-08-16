@@ -28,11 +28,21 @@ classifiers = [
     "Typing :: Typed",
 ]
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+    "koyo",
+    "numpy",
+    "scipy",
+    "numba",
+    "click==7.1.2",
+]
 
 # extras
 # https://peps.python.org/pep-0621/#dependencies-optional-dependencies
 [project.optional-dependencies]
+private = [
+    "yoki5 @ git+https://github.com/lukasz-migas/yoki5.git@main#egg=yoki5",
+    "imspy-core @ git+https://github.com/vandeplaslab/imspy-core.git@main#egg=imspy_core",
+]
 test = ["pytest>=6.0", "pytest-cov"]
 dev = [
     "black",
@@ -101,6 +111,8 @@ extend-ignore = [
     "D401", # First line should be in imperative mood
     "D413", # Missing blank line after last section
     "D416", # Section name should end with a colon
+    "D301", # Use r""" if any backslashes in a docstring
+    "D105", # Missing docstring in magic methods
 ]
 
 [tool.ruff.per-file-ignores]
