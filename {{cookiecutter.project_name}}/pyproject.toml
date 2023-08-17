@@ -64,9 +64,12 @@ repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter
 # spam-cli = "spam:main_cli"
 
 # Entry points
-# https://peps.python.org/pep-0621/#entry-points
-# [project.entry-points."spam.magical"]
-# tomatoes = "spam:main_tomatoes"
+# CLI entry points
+# [project.entry-points."imimspy.plugins"]
+# command = "imspy_XXX.cli:command"
+# pluggy entry points
+# [project.entry-points."imspy.plugins"]
+# XXX = "imspy_XXX.contrib"
 
 [tool.setuptools_scm]
 write_to = "src/{{cookiecutter.project_slug}}/_version.py"
