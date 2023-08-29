@@ -69,7 +69,7 @@ repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter
 # command = "imspy_XXX.cli:command"
 # pluggy entry points
 # [project.entry-points."imspy.plugins"]
-# XXX = "imspy_XXX.contrib"
+# "{{cookiecutter.project_name}}" = "{{cookiecutter.project_slug}}.contrib"
 
 [tool.setuptools_scm]
 write_to = "src/{{cookiecutter.project_slug}}/_version.py"
