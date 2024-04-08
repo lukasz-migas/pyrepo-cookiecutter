@@ -48,7 +48,9 @@ include = '\.pyi?$'
 [tool.ruff]
 line-length = 120
 target-version = "py38"
-extend-select = [
+
+[tool.ruff.lint]
+select = [
     "E",    # style errors
     "F",    # flakes
     "I001", # isort
@@ -60,7 +62,7 @@ extend-select = [
     "RUF",  # ruff-specific rules
 ]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "tests/*.py" = ["D", "S"]
 
 # https://docs.pytest.org/en/6.2.x/customize.html
