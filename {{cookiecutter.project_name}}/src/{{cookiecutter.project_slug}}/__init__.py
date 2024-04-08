@@ -1,4 +1,5 @@
 """{{ cookiecutter.project_short_description }}"""
+
 from importlib.metadata import PackageNotFoundError, version
 
 try:
