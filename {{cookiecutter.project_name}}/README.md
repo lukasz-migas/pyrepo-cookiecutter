@@ -17,3 +17,12 @@ git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.pro
 
 pip install -e .[dev]
 ```
+
+
+## Installing
+
+You can install {{cookiecutter.project_name}} from PyPI:
+
+```bash
+pip install {{cookiecutter.project_name}}
+```
